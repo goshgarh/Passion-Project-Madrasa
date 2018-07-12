@@ -5,7 +5,7 @@ application up and running.
 
 Things you may want to cover:
 * You can sign up as Teacher or Pupil, then you need to login as Teacher or Pupil.
-If you logged in as Pupil you will be able to create a Group. Then other pupils can join this Group.
+If you logged in as Pupil you will be able to create a Group. Then other pupils can join this Group. Teacher can not create a Group
 
 * Ruby version
 
