@@ -1,0 +1,61 @@
+ <section class="news_wrapper"> 
+    <section class="news_section">
+            <div class="img">
+                  <%= image_tag image_path("news_1.jpg") %>
+            </div>
+        
+        <div class="news_title">
+            <div class="date_cr">
+                18 Dec
+            </div>
+            <div class="in_title">Lorem ipsum dolor sit amet, consectetur 
+               adipisicing elit. Accusantium, tempore.
+               <p><%= " #{@pupil.first_name} #{@pupil.last_name}" %> | 2 Comments</p>
+            </div>
+               
+        </div>
+
+    </section>
+     <section class="text_section"><P class="p_text">
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ab itaque nihil tempora expedita necessitatibus facilis vitae error, at, deserunt pariatur et officiis. Molestias, dicta facere at praesentium, ipsa dolores nostrum! Vel dolores quasi unde possimus! Aliquam nisi, tempore quasi.
+                                  </P>
+                                  <p class="italic">
+                                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, veniam.
+                                  </p>
+                                  <P class="p_text">
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ab itaque nihil tempora expedita necessitatibus facilis vitae error, at, deserunt pariatur et officiis. Molestias, dicta facere at praesentium, ipsa dolores nostrum! Vel dolores quasi unde possimus! Aliquam nisi, tempore quasi.
+                                  </P>
+     
+     </section>
+     
+     <section class="people_reply">
+         <p>Comments</p>
+         <div>
+             <div class="img">
+                  <%= image_tag image_path("comment_1.jpg") %>
+             </div>
+             <p>Mark Smith | Dec 18, 2017</p>
+             <p class="p_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil praesentium hic minima error, deleniti laboriosam!</p>
+         </div>
+         <div>
+             <div class="img">
+                  <%= image_tag image_path("comment_2.jpg") %>
+             </div>
+             <p>Mark Smith | Dec 18, 2017</p>
+             <p class="p_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil praesentium hic minima error, deleniti laboriosam!</p>
+         </div>
+     </section>
+     
+     <%= form_for @pupil do |f| %>
+     <section class="leave_comment">
+           <%= f.text_field :first_name, class: "my_inp"%>
+             <%= f.email_field :email %>
+              <%= f.text_area :description, class: "my_inp" %>
+           
+              <%= f.submit "Sign up", class: "button button-block" %>
+     </section>
+    
+  <% end %>
+  </section>
+  
+ 

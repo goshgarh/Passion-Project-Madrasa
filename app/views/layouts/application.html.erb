@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Madrasa</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+     <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+   <%= custom_bootstrap_flash %>
+   
+   <div class="wrap">      
+     <h1 class="h1_main">Welcome to Madrasa EDU</h1>
+     <div class="inner_wrap"> 
+     
+     <div class="dropdown">
+        <button class="dropbtn">New Group</button>
+          <div class="dropdown-content">
+           <a href="<%= new_group_path %>">Create Group</a>
+          </div>
+
+      </div>   
+     
+      <div class="dropdown">
+          <button class="dropbtn">Pupil</button>
+          <div class="dropdown-content">
+           <% if pupil_signed_in? %>
+          <a href="#"><%= " #{current_pupil.first_name} #{current_pupil.last_name}" %></a>
+          
+           <%= link_to "Sign Out", destroy_pupil_session_path, method: :delete %>
+              <% else %>
+                  <%= link_to "Log in", new_pupil_session_path %>     
+                   <a href="<%= new_pupil_registration_path %>">Sign Up</a>
+            <% end %>
+          </div>
+      </div>     
+
+     <div class="dropdown">
+          <button class="dropbtn">Teacher</button>
+          <div class="dropdown-content">
+           <% if teacher_signed_in? %>
+          <a href="#"><%= " #{current_teacher.first_name} #{current_teacher.last_name}" %></a>
+          
+           <%= link_to "Sign Out", destroy_teacher_session_path, method: :delete %>
+              <% else %>
+                  <%= link_to "Log in", new_teacher_session_path %>     
+                   <a href="<%= new_teacher_registration_path %>">Sign Up</a>
+            <% end %>
+          </div>
+      </div>  
+        
+
+          
+    
+       <a href="<%= root_path %>" class="homelink">Home</a>
+     </div>  <!--     End of inner wrap-->
+   </div>
+   
+     <%= yield %>  
+    
+    <footer>
+         <p>COPYRIGHT © 2018 - <a href="<%= root_path %>" title="Go Home"> Madrasa EDU</a>. ALL RIGHTS RESERVED </p>
+    </footer>
+
+            
+  </body>
+</html>

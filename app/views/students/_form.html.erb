@@ -1,0 +1,52 @@
+
+<%= form_for @student do |f| %>
+
+
+<section class="wrapper">
+        <div>
+            <%= f.label :first_name, class: 'mylabel' %>
+            <%= f.text_field :first_name %>
+
+        </div>
+
+           <div>
+            <%= f.label :last_name, class: 'mylabel' %>
+            <%= f.text_field :last_name %>
+
+        </div>     
+
+        <div>
+            <%= f.label :email, class: 'mylabel' %>
+            <%= f.text_field :email %>
+
+        </div>
+
+           <div>
+            <%= f.label :DOB, class: 'mylabel' %>
+            <%= f.date_field :DOB %>
+
+        </div>
+
+
+           <div>
+            <%= f.label :highest_education, class: 'mylabel' %>
+            <%= f.select :highest_education, options_for_select([ "High School", "College", "Masters", "PhD" ])  %>
+
+        </div>
+
+          <div>
+            <%= f.label :description, class: 'mylabel' %>
+            <%= f.text_field :description %>
+
+        </div>
+
+          <div>
+              <%= f.file_field :avatar %>
+          </div>
+
+        <div>
+            <%= f.submit  %>
+        </div>
+
+</section>
+<% end %>

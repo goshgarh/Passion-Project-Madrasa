@@ -1,0 +1,32 @@
+<h2>This is students page</h2><br>
+
+<div class="container">
+   <% @pupils.each do |student| %>
+    <div class="person">
+       
+        <% if student.avatar.attached? %>
+        
+        <a href="<%= student_path(student) %>" data-disable-with ="processing....">
+              <%= image_tag student.avatar, :style => 'height: 300px; width: 300px;' %>
+            
+        </a>
+       
+         <% else %> 
+          <img src="https://placeimg.com/300/300/tech" alt="">
+         <% end %>
+         
+        <br>
+        <br>
+        <p><i>Full Name: </i> <span> <b><%= " #{student.first_name} #{student.last_name}"%></b></span></p>
+         <p><i>email: </i> <span> <b><%= student.email %></b></span></p>
+    </div>
+    
+    <% end %>
+    
+</div>
+
+<!--
+
+  <a href="<= todo_path(todo) %>" data-disable-with ="processing....">View</a>
+  
+  <a href="<= student_path(student) %>" data-disable-with ="processing....">View</a>-->

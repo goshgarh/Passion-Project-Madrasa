@@ -1,0 +1,68 @@
+<h2>Pupil Sign up</h2>
+<br>
+<br>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+  
+  <section class="wrapper">
+         <div class="elem-row"> 
+               <div class="field">
+                <%= f.label :first_name,  class: 'mylabel' %>
+                <%= f.text_field :first_name, placeholder: "First Name", autofocus: true, autocomplete: "" %>
+              </div>
+
+              <div class="field">
+                <%= f.label :last_name,  class: 'mylabel' %>
+                <%= f.text_field :last_name,placeholder: "Last Name", autofocus: true, autocomplete: "" %>
+              </div>
+        
+
+          <div class="field">
+            <%= f.label :email, class: 'mylabel' %>
+            
+            <%= f.email_field :email, placeholder: "Email", autofocus: true, autocomplete: "email" %>
+          </div>
+        </div>
+        <div class="elem-row"> 
+              <div class="field">
+                <%= f.label :DOB, class: 'mylabel' %>
+                <%= f.date_field :DOB, placeholder: "DOB", class: 'dob_opt', autofocus: true, autocomplete: "" %>
+              </div>
+
+              <div class="field">
+                <%= f.label :highest_education, class: 'mylabel' %>
+                <%= f.select :highest_education, options_for_select([  "Highest Education", "High School", "College", "Masters", "PhD"], disabled: "Highest Education", selected: "Highest Education" ), {}, class: "dob_opt",   autofocus: true, autocomplete: "" %>
+              </div>
+
+              <div class="field">
+                <%= f.label :description, class: 'mylabel' %>
+                <%= f.text_field :description, placeholder: "Description", autofocus: true, autocomplete: "" %>
+              </div>
+         </div>
+          <div class="elem-row">
+              <div class="field">
+                <%= f.label :password, class: 'mylabel' %>
+                <% if @minimum_password_length %>
+                <em>(<%= @minimum_password_length %> characters minimum)</em>
+                <% end %><br />
+                <%= f.password_field :password, autocomplete: "off" %>
+              </div>
+
+              <div class="field">
+                <%= f.label :password_confirmation, class: 'mylabel' %>
+                <%= f.password_field :password_confirmation, autocomplete: "off" %>
+              </div>
+          </div>
+             <div class="elem-row">
+                  <div>
+                    <%= f.file_field :avatar %>
+                  </div>
+
+                  <div class="actions">
+                    <%= f.submit "Sign up" %>
+                  </div>
+           </div>
+          </section>   <!-- End of section class = "wrapper" -->
+<% end %>
+
+<!--<= render "pupils/shared/links" %>-->

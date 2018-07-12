@@ -1,0 +1,21 @@
+<h2>This is Groups page</h2><br>
+
+<div class="container">
+   <% @groups.each do |group| %>
+    <div class="person">
+       
+        <% if group.avatar.attached? %>
+         <%= image_tag group.avatar, :style => 'height: 300px; width: 300px;' %>
+         <% else %> 
+          <img src="https://placeimg.com/300/300/tech" alt="">
+         <% end %>
+        
+        <br>
+        <br>
+        <p><i>Name: </i> <span> <b><%= group.name %></b></span></p>
+         <p><i>Description: </i> <span> <b><%= group.description %></b></span></p>
+    </div>
+    
+    <% end %>
+    
+</div>

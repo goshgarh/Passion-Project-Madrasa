@@ -1,0 +1,212 @@
+// Place all the styles related to the Homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.contain {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+    color: #00a2d2;
+}
+
+.alink {
+    text-align: center;
+    background-color: aqua;
+    padding: 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+    margin-left: 15px;
+
+}
+
+.alink:nth-child(2) {
+    background-color: #b366ff; //    margin-left: 15px;
+    color: white;
+}
+
+.alink:hover {
+    background-color: antiquewhite;
+    text-decoration: none;
+    box-shadow: 5px 10px #888888;
+}
+
+//**********************************************************************
+.hero_box {
+    //    width: 25%;
+    height: 160px;
+    background-color: #1a1a1a;
+    padding-left: 50px;
+    cursor: pointer;
+}
+
+.hero_box:hover {
+    background-color: #ffb606;
+}
+
+.hero_box_title {
+    color: aliceblue;
+}
+
+.hero_box_content {
+    padding-left: 20px;
+}
+
+///**********************************************************************
+////////////////////////////////Slider Effect //////////////////////////////////
+* {
+    box-sizing: border-box
+}
+
+
+.mySlides {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+
+.slideshow-container {
+    //    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+
+.my_prev,
+.my_next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    background-color: #ece8e8;
+}
+
+/* Position the "next button" to the right */
+
+.my_next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+
+.my_prev:hover,
+.my_next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+/************************* Fading animation *************************/
+
+.my_fade {
+    -webkit-animation-name: my_fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: my_fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes my_fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes my_fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes slide {
+    0% {
+        left: 0;
+    }
+    10% {
+        left: 0;
+    }
+    20% {
+        left: -100%;
+    }
+    30% {
+        left: -100%;
+    }
+    40% {
+        left: -200%;
+    }
+    50% {
+        left: -200%;
+    }
+    60% {
+        left: -300%;
+    }
+    70% {
+        left: -300%;
+    }
+    80% {
+        left: -300%;
+    }
+    90% {
+        left: -400%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+#slider {
+    overflow: hidden;
+}
+
+#slider figure img {
+    float: left;
+    width: 20%;
+    height: 40vh;
+}
+
+#slider figure {
+    position: relative;
+    width: 500%;
+    animation: slide 15s infinite;
+}
+
+//************************* Fading animation end *************************/
+.my_div {
+    background-image: url("testimonials_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+    .my_prev,
+    .my_next {
+        font-size: 11px;
+    }
+}

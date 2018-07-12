@@ -1,0 +1,55 @@
+
+<%= form_for @group do |f| %>
+
+
+
+
+<div class="form">
+
+        <ul class="tab-group">
+           
+            <li class="tab active"><a href="#login">New Group</a></li>
+        </ul>
+
+        <div class="tab-content">
+           
+
+            <div id="login">
+<!--                <h1>Welcome Back!</h1>-->
+
+                <section class="my_sign_in">
+                    <div class="field-wrap">
+                        <label>
+                              Name of the Group<span class="req">*</span>
+                            </label>
+                   <%= f.text_field :name, class: "my_inp" %>
+
+                    </div>
+
+                    <div class="field-wrap">
+                        <label>
+                              Descriptuon<span class="req">*</span>
+                            </label>
+                       <%= f.text_field :description, class: "my_inp" %>        
+
+                    </div>
+                    
+                     <div>
+                          <%= f.file_field :avatar %>
+                     </div>
+
+
+
+                      <%= f.submit "Create a Group", class: "button button-block" %>
+
+                </section>
+
+            </div>
+
+        </div>
+        <!-- tab-content -->
+
+    </div>
+
+
+<% end %>

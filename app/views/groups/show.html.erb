@@ -1,0 +1,28 @@
+<h3>Group details</h3>
+
+  
+  <div>
+       <%= image_tag @group.avatar, :style => 'height: 300px; width: 300px;' %>
+  </div>
+   <div>
+    First Name: <%= @group.name %>
+    
+</div>
+  
+<div>
+    Description: <%= @group.description %>
+    
+</div>
+  
+   <div>
+    Created: <%= @group.created_at %>
+</div>
+   <div>
+    Updated: <%= @group.updated_at %>
+</div>
+<div>
+    <a href="<%= groups_path %>">Go Back</a>
+</div>
+<div>
+    <a href="<%= new_group_path %>">Go to New Group</a>
+</div>

@@ -1,0 +1,416 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require bootstrap/dist/css/bootstrap.min 
+ *= require @fortawesome/fontawesome-free/css/all
+ *= require owl.carousel
+ *= require owl.theme
+ *= require toastr/build/toastr.min
+ *= require homes 
+ *= require_self
+ */
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #192838;
+    color: whitesmoke;
+    margin-bottom: 20px;
+}
+
+.inner_wrap {
+    margin-top: 20px;
+}
+
+.homelink {
+    text-align: center;
+    padding: 20px 40px;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+
+
+}
+
+.homelink:hover {
+    background-color: antiquewhite;
+    text-decoration: none;
+    box-shadow: 5px 10px #888888;
+}
+
+.h1_main {
+
+    color: whitesmoke; //    color: #333;
+    text-align: center;
+    margin: 15px 50px; //    padding-left: 50px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.person + .person {
+    margin-left: 20px;
+
+}
+
+footer p {
+
+    margin-top: 20px;
+    background-color: #192838;
+    padding: 30px;
+    text-align: center;
+    color: whitesmoke;
+    margin-bottom: 0;
+}
+
+//****************Drop down styling**********************************//
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 1.5em;
+    border: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.dropdown {
+    position: relative;
+    display: inline;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 5px;
+    background-color: #f1f1f1;
+    width: auto; // box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    //    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.5s ease-in-out;
+    width: 140px;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; //    cursor: pointer;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+
+}
+
+//**************** Drop down styling  end  **********************************//
+.h3_newpage {
+    margin-left: 100px;
+}
+
+
+.wrapper {
+    margin: auto;
+    width: 90%;
+}
+
+.mylabel {
+    margin-right: 20px; //    width: 180px;
+    text-align: left;
+}
+
+.btn_submit {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #234576;
+}
+
+.field {
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    justify-content: center;
+}
+
+//.dob_opt {
+//    width: 240px;
+//}
+.elem-row {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+.my_opt {
+    width: 300px;
+    height: 40px;
+}
+
+@media (max-width: 690px) {
+    .alink:nth-child(2) {
+        margin-left: inherit;
+    }
+    .field {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 900px) {
+    .wrap {
+        justify-content: center;
+
+    }
+    .elem-row {
+        flex-direction: column;
+    }
+}
+
+//********************** Style Login Sign Up **************************** *,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background: #c1bdba;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #1ab188;
+    transition: .5s ease;
+}
+
+a:hover {
+    color: #179b77;
+}
+
+.form {
+    background: rgba(19, 35, 47, 0.9);
+    padding: 40px;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+.tab-group {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+
+.tab-group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.tab-group li a {
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    background: rgba(160, 179, 176, 0.25);
+    color: #a0b3b0;
+    font-size: 20px;
+    float: left;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.tab-group li a:hover {
+    background: #179b77;
+    color: #ffffff;
+}
+
+.tab-group .active a {
+    background: #1ab188;
+    color: #ffffff;
+}
+
+.tab-content > div:last-child {
+    //    display: none;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-weight: 300;
+    margin: 0 0 40px;
+}
+
+label {
+    position: absolute;
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+    left: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 0.25s ease;
+    -webkit-backface-visibility: hidden;
+    pointer-events: none;
+    font-size: 22px;
+}
+
+label .req {
+    margin: 2px;
+    color: #1ab188;
+}
+
+label.active {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    left: 2px;
+    font-size: 14px;
+}
+
+label.active .req {
+    opacity: 0;
+}
+
+label.highlight {
+    color: #ffffff;
+}
+
+//input,
+.my_inp,
+textarea {
+    font-size: 22px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    background: none;
+    background-image: none;
+    border: 1px solid #a0b3b0;
+    color: #ffffff;
+    border-radius: 0;
+    transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+//input:focus,
+.my_inp:focus,
+textarea:focus {
+    outline: 0;
+    border-color: #1ab188;
+}
+
+textarea {
+    border: 2px solid #a0b3b0;
+    resize: vertical;
+}
+
+.field-wrap {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.top-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.top-row > div {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+}
+
+.top-row > div:last-child {
+    margin: 0;
+}
+
+.button {
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    padding: 15px 0;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    background: #1ab188;
+    color: #ffffff;
+    transition: all 0.5s ease;
+    -webkit-appearance: none;
+}
+
+.button:hover,
+.button:focus {
+    background: #179b77;
+}
+
+.button-block {
+    display: block;
+    width: 100%;
+}
+
+.forgot {
+    margin-top: -20px;
+    text-align: right;
+}
+
+
+//**********************   Style Login Sign Up  end****************************
+//***********************student show page ******************************
+.news_wrapper {
+    width: 90%;
+    margin: auto;
+}
+
+.news_section .img {
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.date_cr {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    color: white;
+    background: #ffb606;
+    text-align: center;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.news_title {
+    display: flex;
+}
+
+.p_text {
+    color: #5a5a5a;
+}
+
+//***********************student show page  end ******************************

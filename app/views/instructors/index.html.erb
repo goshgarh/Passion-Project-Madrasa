@@ -1,0 +1,22 @@
+<h2>This is Instructors page</h2><br>
+
+<div class="container">
+   <% @teachers.each do |instructor| %>
+    <div class="person">
+    
+       <% if instructor.avatar.attached? %>
+         <%= image_tag instructor.avatar, :style => 'height: 300px; width: 300px;' %>
+         <% else %> 
+          <img src="https://placeimg.com/300/300/tech" alt="">
+         <% end %>
+         
+        <br>
+        <br>
+        <p><i>Full Name: </i> <span> <b><%= " #{instructor.first_name} #{instructor.last_name} " %></b></span></p>
+        <p><i>email: </i> <span> <b><%= instructor.email %></b></span></p>
+        
+    </div>
+    
+    <% end %>
+    
+</div>
